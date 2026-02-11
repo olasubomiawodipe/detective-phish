@@ -2,5 +2,16 @@
   "manifest_version": 3,
   "name": "Detective Phish",
   "version": "0.1.0",
-  "description": "Extension for detecting phishing in emails"
+
+  "description": "Extension for detecting phishing in emails",
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://mail.google.com/*",
+        "https://outlook.office.com/*"
+      ],
+      "js": ["scraper.js"]
+    }
+  ]
 }
