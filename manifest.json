@@ -15,7 +15,7 @@
         "https://outlook.live.com/*",
         "https://outlook.office.com/*"
       ],
-      "js": ["scraper.js"]
+      "js": ["scripts/scraper.js"]
     }
   ]
 }
