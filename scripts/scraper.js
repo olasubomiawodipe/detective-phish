@@ -14,19 +14,19 @@ function isEmailOpen() {
     //
 }
 
-function extractSenderEmailAddress() {
+function getSenderEmailAddress() {
     //
 }
 
-function extractSubject() {
+function getEmailSubject() {
     //
 }
 
-function extractBody() {
+function getEmailBody() {
     //
 }
 
-function extractLinks() {
+function getLinks() {
     //
 }
 
@@ -35,8 +35,12 @@ function sendToAPI() {
 }
 
 /**
- *
+ * Entry point method.
+ * Orchestrates the scraping flow:
+ * 1. Checks if email is open
+ * 2. Scrape email for info
+ * 3. Send info to API
  */
 function scrapeEmail() {
-    //
+
 }
