@@ -9,3 +9,34 @@
      * Create JSON object
      * Send to backend API
  */
+
+function isEmailOpen() {
+    //
+}
+
+function extractSenderEmailAddress() {
+    //
+}
+
+function extractSubject() {
+    //
+}
+
+function extractBody() {
+    //
+}
+
+function extractLinks() {
+    //
+}
+
+function sendToAPI() {
+
+}
+
+/**
+ *
+ */
+function scrapeEmail() {
+    //
+}
