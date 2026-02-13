@@ -1,5 +1,5 @@
-console.log("This is Detective Phish!");
-
 document.getElementById('scrapeBtn').addEventListener('click', () => {
-    console.log("Button was clicked!")
+    chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
+        chrome.tabs.sendMessage(tabs[0].id, {action: "scrape"});
+    });
 })
