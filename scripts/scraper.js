@@ -1,24 +1,24 @@
 function isEmailOpen() {
-    return document.querySelector('h2.hP') !== null;
+    return document.querySelector(SELECTORS.SUBJECT) !== null;
 }
 
 function getSenderEmailAddress() {
-    const senderElement = document.querySelector('span[email]');
+    const senderElement = document.querySelector(SELECTORS.SENDER);
     return senderElement ? senderElement.getAttribute('email') : '';
 }
 
 function getEmailSubject() {
-    const subjectElement = document.querySelector('h2.hP');
+    const subjectElement = document.querySelector(SELECTORS.SUBJECT);
     return subjectElement ? subjectElement.textContent.trim() : '';
 }
 
 function getEmailBody() {
-    const bodyElement = document.querySelector('div.a3s.aiL');
+    const bodyElement = document.querySelector(SELECTORS.BODY);
     return bodyElement ? bodyElement.innerText.trim() : '';
 }
 
 function getLinks() {
-    const bodyElement = document.querySelector('div.a3s.aiL');
+    const bodyElement = document.querySelector(SELECTORS.BODY);
     if (!bodyElement) return [];
 
     const linkElements = bodyElement.querySelectorAll('a[href]');
@@ -54,7 +54,7 @@ function scrapeEmail() {
 }
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-    if (request.action === "scrape") {
+    if (request.action === ACTIONS.SCRAPE) {
         scrapeEmail();
     }
 });

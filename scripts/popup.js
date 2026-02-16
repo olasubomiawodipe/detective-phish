@@ -1,5 +1,5 @@
 document.getElementById('scrapeBtn').addEventListener('click', () => {
     chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
-        chrome.tabs.sendMessage(tabs[0].id, {action: "scrape"});
+        chrome.tabs.sendMessage(tabs[0].id, {action: ACTIONS.SCRAPE});
     });
 })

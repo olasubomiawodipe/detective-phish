@@ -19,7 +19,7 @@
         "https://outlook.live.com/*",
         "https://outlook.office.com/*"
       ],
-      "js": ["scripts/scraper.js"]
+      "js": ["constants.js","scripts/scraper.js"]
     }
   ]
 }
